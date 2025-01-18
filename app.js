@@ -10,4 +10,4 @@ app.listen(port, () => {
     console.log(
         'Guten Tag'
     )
-})
+});
