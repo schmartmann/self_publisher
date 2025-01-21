@@ -9,5 +9,5 @@ describe('GET /books', function() {
             .get('/books')
             .expect(200)
             .expect(expectedBooks)
-    })
-  })
+    });
+});

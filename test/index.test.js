@@ -8,5 +8,5 @@ describe('GET /', function() {
         .get('/')
         .expect(302)
         .expect('Location', '/books')
-    })
-  })
+    });
+});
