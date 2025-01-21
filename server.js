@@ -2,8 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const booksRouter = require('./routes/books')
+
+app.use('/books', booksRouter)
+
 app.get('/', (req, res) => {
-    res.send('Hello world!');
+    res.redirect('/books')
 });
 
 app.listen(port, () => { 
