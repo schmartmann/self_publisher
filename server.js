@@ -15,3 +15,5 @@ app.listen(port, () => {
         'Guten Tag'
     )
 });
+
+module.exports = app
