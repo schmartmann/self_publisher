@@ -4,6 +4,9 @@ const port = 3000;
 
 const booksRouter = require('./routes/books')
 
+app.set('views', './views')
+app.set('view engine', 'pug')
+
 app.use('/books', booksRouter)
 
 app.get('/', (req, res) => {
