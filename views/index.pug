@@ -3,3 +3,7 @@ html
     title= title
   body
     h1= message
+    ul
+        each book in books
+            - var url = '/books/' + book
+            li: a(src=url )= book 
