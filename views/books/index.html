@@ -1,9 +1,19 @@
-html
-  head
-    title= title
-  body
-    h1= message
-    ul
-        each book in books
-            - var url = '/books/' + book
-            li: a(src=url )= book 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Books</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h1>Books</h1>
+        <ul>
+            <% for(var i = 0; i < books.length; i++) { %>
+                <li>
+                    <a href='/books/<%= books[i].id %>'>
+                        <%= books[i].title %>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+    </body>
+</html>
