@@ -87,3 +87,12 @@ async function printDocTitle(auth) {
 }
 
 authorize().then(printDocTitle).catch(console.error);
+
+class Synchronizer {
+    constructor(clientId, clientSecret){ 
+        this.clientId = clientId,
+        this.clientSecret = clientSecret
+    }
+};
+
+module.exports = Synchronizer
