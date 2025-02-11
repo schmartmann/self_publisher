@@ -21,7 +21,7 @@ describe('GET /books', () => {
 });
 
 describe('GET /books/:id', () => { 
-    it('returns a book', async () => {
+    it('returns a book by ID', async () => {
         let viewTemplate = await ejs.renderFile('views/books/view.html', { 
             book: testBook
         })
