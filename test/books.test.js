@@ -3,11 +3,7 @@ const app = require('../server');
 const ejs = require('ejs');
 
 const booksFixture = require('./booksFixture.json')
-// const testBook = require('../test/driveDocFixture.json')
-
-// const compiledViewTemplate = ejs.renderFile('views/books/view.html', { 
-//     book: {}
-// })
+const testBook = require('../test/driveDocFixture.json')
 
 describe('GET /books', () => {
     it('returns list of books', async () => {
@@ -24,14 +20,18 @@ describe('GET /books', () => {
 
 });
 
-// describe('GET /books/:id', () => { 
-//     it('returns a book', async () => {
-//         return await request(app)
-//             .get('/books/1234')
-//             .expect(200)
-//             .expect(testBook)
-//     });
-// });
+describe('GET /books/:id', () => { 
+    it('returns a book', async () => {
+        let viewTemplate = await ejs.renderFile('views/books/view.html', { 
+            book: testBook
+        })
+
+        return await request(app)
+            .get('/books/1234')
+            .expect(200)
+            .expect(viewTemplate)
+    });
+});
 // google docs api
 // will give structure
 // that will be saved into DB
