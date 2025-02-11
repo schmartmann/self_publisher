@@ -1,0 +1,8 @@
+{
+    "title": "Hey",
+    "message": "Hello there!",
+    "books": [
+        { "title": "Braggi & Aneta", "id": 1234 },
+        { "title": "Mecha Comedy", "id": 4321 }
+    ]
+}

@@ -3,15 +3,10 @@ const booksRouter = express.Router();
 
 const testBook = require('../test/driveDocFixture.json')
 
+const booksFixture = require('../test/booksFixture.json')
+
 booksRouter.get('/', (req, res) => { 
-    res.render('./books/index', {
-        title: 'Hey',
-        message: 'Hello there!',
-        books: [
-            { title: 'Braggi & Aneta', id: 1234 },
-            { title: 'Mecha Comedy', id: 4321 }
-        ]
-    });
+    res.render('./books/index', booksFixture);
 });
 
 booksRouter.get('/:id', (req, res) => { 
