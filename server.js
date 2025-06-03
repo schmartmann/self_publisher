@@ -24,3 +24,17 @@ app.listen(port, () => {
 });
 
 module.exports = app
+
+
+
+var lettersArray = "HI MICKEY ITS YOUR OLD PAL MICRO ZUMBO I AM TOO SMALL TO HEAR SO I GOTTA LEAP FROM KEY TO KEY TO TYPE THIS OUT".split('').reverse()
+
+for (let i = 0; i < lettersArray.length; i++) { 
+
+    var randomSecondsDelay = Math.floor((Math.random() + 1) * 3);
+
+    setTimeout(() => { 
+        var letter = lettersArray.pop();
+        console.log(letter)
+    }, randomSecondsDelay * 1000)
+}
